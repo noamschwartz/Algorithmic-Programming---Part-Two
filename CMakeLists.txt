@@ -3,6 +3,6 @@ project(project2)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(project2 main.cpp Server.cpp Server.h MySerialServer.cpp MySerialServer.h ClientHandler.cpp
+add_executable(project2 Main.cpp Server.cpp Server.h MySerialServer.cpp MySerialServer.h ClientHandler.cpp
         ClientHandler.h MyTestClientHandler.cpp MyTestClientHandler.h Solver.h Solver.cpp CacheManager.cpp
-        CacheManager.h FileCacheManager.cpp FileCacheManager.h)
+        CacheManager.h FileCacheManager.cpp FileCacheManager.h StringReverser.cpp StringReverser.h)

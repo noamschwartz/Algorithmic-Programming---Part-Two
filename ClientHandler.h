@@ -5,8 +5,12 @@
 #ifndef PROJECT2_CLIENTHANDLER_H
 #define PROJECT2_CLIENTHANDLER_H
 
+#include <iostream>
+
 
 class ClientHandler {
+public:
+    void HandleClient(std::istream request, std::ostream answer);
 
 };
 

@@ -6,10 +6,14 @@
 #define PROJECT2_SERVER_H
 
 #include "ClientHandler.h"
+namespace server_side {
+    class Server {
+    public:
+        virtual void Open(int port, ClientHandler ClientH) = 0;
 
-class Server {
-
-};
+        virtual void Stop() = 0;
 
 
+    };
+}
 #endif //PROJECT2_SERVER_H

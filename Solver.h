@@ -5,8 +5,11 @@
 #ifndef PROJECT2_SOLVER_H
 #define PROJECT2_SOLVER_H
 
-
+template <class P, class S>
 class Solver {
+public:
+    virtual const S& solve(P& p) = 0;
+
 
 };
 
