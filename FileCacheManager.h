@@ -5,16 +5,28 @@
 #ifndef PROJECT2_FILECACHEMANAGER_H
 #define PROJECT2_FILECACHEMANAGER_H
 
+#include <unordered_map>
 #include "CacheManager.h"
-class FileCacheManager : CacheManager <class P, class S> {
+
+using namespace std;
+template <class P, class S>
+class FileCacheManager : CacheManager <P, S> {
+
+    unordered_map<P, S> probSol;
+    string fileName;
+
 public:
-    //save the problem and solution to the file/disc.
-    void save(const P& problem , const S& solution);
+    FileCacheManager(const string fName);
+    void createMap();
+    //save the problem and solution to the file.
+    virtual void saveToMap(P problem , S solution);
+    void saveToFile(P problem, S solution);
     //get the solution for the problem
-    S get(const P& problem);
-    //will check the hash map or file/disc for exiting solution and return true or false
-    bool check(const P& problem);
+    virtual S get(P problem);
+    //will check the hash map or file for exiting solution and return true or false
+    virtual bool checkMap(P problem);
 };
+
 
 
 #endif //PROJECT2_FILECACHEMANAGER_H

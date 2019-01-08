@@ -10,10 +10,12 @@
 #include "CacheManager.h"
 class MyTestClientHandler : public ClientHandler {
 
-    Solver  <class P, class S> *solver;
-    CacheManager  <class P, class S> *cm;
+    Solver<string, string> *solver;
+    CacheManager<string, string> *cm;
 public:
-
+    MyTestClientHandler(Solver<string, string> *solve, CacheManager<string, string> *cacheManage);
+    void handleClient(int socket);
+    string readFromSocket(int socket);
 };
 
 

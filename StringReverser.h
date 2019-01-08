@@ -7,8 +7,12 @@
 
 
 #include "Solver.h"
-class StringReverser : public Solver<class P, class S> {
+#include <string>
 
+using namespace std;
+class StringReverser : public Solver<class P, class S> {
+public:
+    const string& solve(string& problem);
 };
 
 
